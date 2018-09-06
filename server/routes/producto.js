@@ -8,7 +8,7 @@ router.get('/:id', async (req, res) => {
   const { rows } = await db.query('SELECT * FROM anmat WHERE id = $1', [id])
 
   // const { rows } = await db.query('SELECT * FROM anmat t WHERE t::text LIKE '%query%'')
-  res.send(rows[0])
+  res.send(rows)
 })
 
 
