@@ -13,7 +13,6 @@ class Routes extends Component {
         <Router>
           <div>
             <Route exact path="/" component={App} />
-            {/* <Route exact path="/producto/:id" component={Product} /> */}
             <Route exact path="/busqueda/:query" component={Resultados} />
             <Route exact path="/categorias" component={Categorias} />
             <Route exact path="/categoria/:id" component={CategoryResults} />

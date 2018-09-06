@@ -20,7 +20,7 @@ class CategoryListItem extends Component {
     return (
       <div className="col-lg-3 col-md-4 col-sm-6 portfolio-item">
       <div className="card h-100">
-        <a href="#"><img className="card-img-top" src="http://placehold.it/700x400" alt="" /></a>
+        <a href={url}><img className="card-img-top" src="http://placehold.it/700x400" alt="" /></a>
         <div className="card-body">
           <h4 className="card-title">
             <a href={url}>{this.props.result.name}</a>

@@ -20,7 +20,7 @@ class Resultados extends Component {
   componentDidMount() {
     const offset = (this.state.page - 1) * 8;
     let query = this.props.match.params.query
-    fetch('http://localhost:3001/busqueda/' + query)
+    fetch('https://server-uqoftcoieo.now.sh/busqueda/' + query)
       .then(data => {
         return data.json();
       })
