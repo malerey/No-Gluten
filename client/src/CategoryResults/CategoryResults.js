@@ -20,7 +20,7 @@ class CategoryResults extends Component {
   componentDidMount() {
     const offset = (this.state.page - 1) * 8;
     let id = this.props.match.params.id
-    fetch('http://localhost:3001/categoria/' + id)
+    fetch('https://server-uqoftcoieo.now.sh/categoria/' + id)
       .then(data => {
         return data.json();
       })
