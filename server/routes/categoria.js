@@ -3,12 +3,12 @@ const db = require('../db')
 const router = new Router()
 
 
-router.get('/:categoria', async (req, res) => {
-  const { categoria } = req.params
-  const { rows } = await db.query('SELECT * FROM anmat WHERE tipo_producto = $1', [categoria])
+router.get('/:tipo_producto', async (req, res) => {
+  const { tipo_producto } = req.params
+  const { rows } = await db.query('SELECT * FROM anmat WHERE tipo_producto = $1', [tipo_producto])
 
   // const { rows } = await db.query('SELECT * FROM anmat t WHERE t::text LIKE '%query%'')
-  res.send(rows[0])
+  res.send(rows)
 })
 
 

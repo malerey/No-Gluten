@@ -49,6 +49,15 @@ h6 {
 p {
   font-size: 15px; }
 
+  .portfolio-item {
+    margin-bottom: 30px;
+  }
+  
+  .pagination {
+    margin-bottom: 30px;
+  }
+  
+
 .main-block {
   padding: 90px 0; }
   @media (max-width: 768px) {
@@ -270,9 +279,8 @@ footer {
     color:white;
 }
 
-#criollo {
-  font-size: 12px;
-  font-style: italic;
+.criollo {
+  padding-top: 20px
 }
 
 .copyright {

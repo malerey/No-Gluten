@@ -12,6 +12,7 @@ class Search extends Component {
 
   handleChange(e) {
     const value = e.target.value;
+    console.log(value)
 
     this.setState({
       url: value

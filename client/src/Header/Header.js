@@ -14,16 +14,21 @@ class Header extends Component {
                   <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="icon-menu"></span>
                   </button>
+                  <ul className="navbar-nav">
+                  <li className="nav-item">
+                        <a className="nav-link" href="/">Sin Gluten!</a>
+                      </li>
+                      </ul>
                   <div className="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                     <ul className="navbar-nav">
                       <li className="nav-item">
-                        <a className="nav-link" href="#">Categorías</a>
+                        <a className="nav-link" href="/categorias">Categorías</a>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link" href="#">ANMAT</a>
+                        <a className="nav-link" href="http://www.anmat.gov.ar/Alimentos/libres_gluten/Alimentos_Libres_de_Gluten.asp">ANMAT</a>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link" href="#">Preguntas</a>
+                        <a className="nav-link" href="mailto:reymalena@gmail.com">Contactanos</a>
                       </li>
                     </ul>
                   </div>
