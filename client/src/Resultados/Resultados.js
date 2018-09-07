@@ -85,7 +85,7 @@ class Resultados extends Component {
             <h2 className="my-4">Resultados para "{query}"</h2>
           </div>
 
-          <div className='quantity'>Pagina {page} | Mostrando {prodslength * (page - 1)} - {prodslength * page} de {length} productos</div>
+          <div className='quantity'>Página {page} | Mostrando {prodslength * (page - 1)} - {prodslength * page} de {length} productos</div>
 
           <ul className="pagination justify-content-center">
             <li className="page-item">
