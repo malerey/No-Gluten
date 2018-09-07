@@ -109,13 +109,13 @@ class CategoryResults extends Component {
       else if ( id == "40") { id = "Mantecas"}
       else if ( id == "41") { id = "Margarinas"}
       else if ( id == "42") { id = "Mermeladas, confituras y dulces"}
-      else if ( id == "43") { id = "Panes y productos de panaderia"}
+      else if ( id == "43") { id = "Panes y productos de panadería"}
       else if ( id == "44") { id = "Pastas"}
       else if ( id == "45") { id = "Postres, flanes y helados listos para consumir"}
-      else if ( id == "46") { id = "Productos de confiteria"}
-      else if ( id == "47") { id = "Productos de reposteria"}
+      else if ( id == "46") { id = "Productos de confitería"}
+      else if ( id == "47") { id = "Productos de repostería"}
       else if ( id == "48") { id = "Productos para preparar postres, flanes, gelatinas y helados"}
-      else if ( id == "48") { id = "Quesos"}
+      else if ( id == "49") { id = "Quesos"}
       else if ( id == "50") { id = "Sales"}
       else if ( id == "51") { id = "Salsas y aderezos"}
       else if ( id == "52") { id = "Snacks"}
@@ -142,7 +142,7 @@ class CategoryResults extends Component {
             <h2 className="my-4">{id}</h2>
           </div>
 
-          <div className='quantity'>Pagina {page} | Mostrando {prodslength * (page - 1)} - {prodslength * page} de {length} productos</div>
+          <div className='quantity'>Página {page} | Mostrando {prodslength * (page - 1)} - {prodslength * page} de {length} productos</div>
 
           <ul className="pagination justify-content-center">
             <li className="page-item">

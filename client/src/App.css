@@ -107,15 +107,20 @@ p {
 .navbar {
   padding: .5rem 0; }
 
-.navbar-light .navbar-nav .nav-link {
+.navbar .navbar-nav .nav-link {
   font-size: 16px;
   font-weight: 300;
   color: #fff; }
 
-  .navbar-light .navbar-nav .nav-link:hover {
+  
+  .navbar .navbar-nav .nav-link:hover{
+    color: rgba(255, 255, 255, 0.767);
+  }
+
+  .navbar .navbar-nav {
     color: #d3d3d3; }
 
-.navbar-light .navbar-toggler {
+.navbar .navbar-toggler {
   color: #fff;
   border-color: #fff; }
 

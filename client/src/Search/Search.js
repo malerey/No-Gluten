@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import '../scss/Search.css';
 import { Link } from 'react-router-dom';
 
 class Search extends Component {

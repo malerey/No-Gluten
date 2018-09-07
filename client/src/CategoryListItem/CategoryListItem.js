@@ -25,7 +25,7 @@ class CategoryListItem extends Component {
           <h4 className="card-title">
             <a href={url}>{this.props.result.name}</a>
           </h4>
-          <p className="card-text">Listado de todos los productos bajo la categoria "{this.props.result.name}" de ANMAT</p>
+          <p className="card-text">Listado de todos los productos bajo la categoría "{this.props.result.name}" de ANMAT</p>
         </div>
       </div>
     </div>

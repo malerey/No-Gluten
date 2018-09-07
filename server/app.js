@@ -4,11 +4,30 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var sassMiddleware = require('node-sass-middleware');
+var bodyParser = require('body-parser');
 
-const mountRoutes = require('./routes')
+var producto = require('./routes/producto');
+var busqueda = require('./routes/busqueda');
+var categoria = require('./routes/categoria');
+var send = require('./routes/send');
+
 
 const app = express()
-mountRoutes(app)
+
+
+    app.all('/*', function(req, res, next) {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Credentials', true);
+    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization, Cache-Control, Pragma');
+    if (req.method === 'OPTIONS') {
+      res.sendStatus(204);
+    } else {
+      next();
+    }
+  });
+
+
 
 
 // view engine setup
@@ -18,17 +37,21 @@ app.set('view engine', 'pug');
 
 
 app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(sassMiddleware({
   src: path.join(__dirname, 'public'),
   dest: path.join(__dirname, 'public'),
   indentedSyntax: true, // true = .sass and false = .scss
   sourceMap: true
 }));
-app.use(express.static(path.join(__dirname, 'public')));
 
+app.use('/producto', producto)
+app.use('/busqueda', busqueda)
+app.use('/categoria', categoria)
+app.post('/send', send)
 
 
 // catch 404 and forward to error handler
