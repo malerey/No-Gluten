@@ -26,11 +26,6 @@ class CategoryResults extends Component {
       .then(data => {
         return data.json();
       })
-      .finally(() => {
-        this.setState({
-          ajaxCompleted: true,
-        })
-      })
       .then(result => {
         this.setState({
           data: result,
