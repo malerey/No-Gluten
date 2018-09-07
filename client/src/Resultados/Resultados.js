@@ -26,17 +26,13 @@ class Resultados extends Component {
       .then(data => {
         return data.json();
       })
-      .finally(()=> {
-        this.setState({
-          ajaxCompleted: true,
-        })
-      })
       .then(result => {
         this.setState({
           data: result,
           renderedData: result.slice(offset, offset + 8),
           received: true,
           query: query,
+          ajaxCompleted: true
         });
       });
   }
