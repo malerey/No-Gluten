@@ -71,6 +71,9 @@ typings/
 # vuepress build output
 .vuepress/dist
 
+#vscode directories
+.vscode
+
 # Serverless directories
 .serverless
 
