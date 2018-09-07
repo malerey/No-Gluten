@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Loader from '../Spinners/Loader';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import Product from '../Product/Product';
@@ -12,6 +13,7 @@ class CategoryResults extends Component {
       page: 1,
       received: false,
       id: '',
+      ajaxCompleted: false
     };
     this.nextPage = this.nextPage.bind(this);
     this.previousPage = this.previousPage.bind(this);
@@ -24,12 +26,18 @@ class CategoryResults extends Component {
       .then(data => {
         return data.json();
       })
+      .finally(() => {
+        this.setState({
+          ajaxCompleted: true,
+        })
+      })
       .then(result => {
         this.setState({
           data: result,
           renderedData: result.slice(offset, offset + 8),
           received: true,
           id: id,
+          ajaxCompleted: true
         });
       });
   }
@@ -135,6 +143,17 @@ class CategoryResults extends Component {
 
         <Header />
 
+        { !this.state.ajaxCompleted ? (
+          <Loader
+              type="ThreeDots"
+              color="#0d98ba"
+              height="200"	
+              width="200"
+              
+            />
+        ) : (
+
+        <div>
         <div className="container">
           <div>
             <br />
@@ -188,6 +207,8 @@ class CategoryResults extends Component {
             </div>
           </li>
         </ul>
+        </div>
+        )}
 
         <Footer />
       </div>
