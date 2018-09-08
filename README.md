@@ -2,6 +2,22 @@
 
 https://singluten.now.sh
 
+This is a project started by a very, very Jr developer, so all help is welcome!
+
+To-dos:
+
+- [x] Contact form 
+- [ ] Improve database (right now it's a copy of this one: http://www.anmat.gov.ar/Alimentos/libres_gluten/Listado_Integrado_de_ALG.csv)
+- [ ] Fastest loading time 
+- [ ] Erase useless code
+- [ ] Clean up CSS
+- [ ] Add pagination in product results 
+- [ ] Add A to Z search in category list
+- [ ] Improve the search function. Right now, it doesn't show the most relevant results first.
+- [ ] Last page of results shows weird number of products. 
+
+
+
 The server is coded in Node.js, Restler and Express. It reaches a database hosted in my home computer to obtain data from different gluten-free products for sale in Argentina, as checked by ANMAT, and formats them to be displayed in the frontend.
 
 The frontend is coded in React.

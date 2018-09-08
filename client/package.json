@@ -10,7 +10,7 @@
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "1.1.4",
+    "react-scripts": "^1.1.5",
     "restler": "^3.4.0"
   },
   "scripts": {
