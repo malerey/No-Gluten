@@ -156,7 +156,11 @@ class CategoryResults extends Component {
             <h2 className="my-4">{id}</h2>
           </div>
 
+<<<<<<< HEAD
           <div className='quantity'>Página {page} | Mostrando {prodslength * (page - 1)} - {prodslength * page} de {length} productos</div>
+=======
+          <div className='quantity'>Página {page} | Mostrando {8 * (page - 1)} - {(8 * (page -1)) + prodslength} de {length} productos</div>
+>>>>>>> a7510903b87d1dc3d98895d8adc8b53cfb692242
 
           <ul className="pagination justify-content-center">
             <li className="page-item">
