@@ -7,6 +7,7 @@ This is a project started by a very, very Jr developer, so all help is welcome!
 To-dos:
 
 - [x] Contact form 
+- [ ] Move database to AWS
 - [ ] Improve database (right now it's a copy of this one: http://www.anmat.gov.ar/Alimentos/libres_gluten/Listado_Integrado_de_ALG.csv)
 - [ ] Fastest loading time 
 - [ ] Erase useless code
