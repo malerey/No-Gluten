@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Loader from '../Spinners/Loader';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import Product from '../Product/Product';
@@ -12,6 +13,7 @@ class Resultados extends Component {
       page: 1,
       received: false,
       query: '',
+      ajaxCompleted: false,
     };
     this.nextPage = this.nextPage.bind(this);
     this.previousPage = this.previousPage.bind(this);
@@ -30,6 +32,7 @@ class Resultados extends Component {
           renderedData: result.slice(offset, offset + 8),
           received: true,
           query: query,
+          ajaxCompleted: true
         });
       });
   }
@@ -74,10 +77,22 @@ class Resultados extends Component {
     { this.state.received ? (length = this.state.data.length, prodslength = this.state.renderedData.length, page = this.state.page) : ('') }
 
     return (
+      
       <div className='Main'>
 
         <Header />
 
+        { !this.state.ajaxCompleted ? (
+          <Loader
+              type="ThreeDots"
+              color="#0d98ba"
+              height="200"	
+              width="200"
+              
+            />
+        ) : (
+        
+        <div>
         <div className="container">
           <div>
             <br />
@@ -131,9 +146,12 @@ class Resultados extends Component {
             </div>
           </li>
         </ul>
-
+        </div>
+        )}
+        
         <Footer />
       </div>
+   
     );
   }
 }
