@@ -1,0 +1,7 @@
+{
+  "env": {
+    "PASSCONFIG": "@configpass",
+    "PASSINDEX": "@indexpass",
+    "HOSTINDEX": "@indexhost"
+  }
+}
