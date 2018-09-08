@@ -12,36 +12,7 @@ class Contacto extends Component {
     };
   }
 
-  handleSubmit(e){
-    e.preventDefault();
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-    console.log(name)
-    console.log(email)
-    console.log(message)
-    
-    axios({
-        method: "POST", 
-        url:"http://localhost:3001/mail", 
-        body: {
-            name: name,   
-            email: email,  
-            message: message
-        }
-    }).then((response)=>{
-        if (response.data.msg === 'success'){
-          console.log(name, email, message)
-            alert("Mensaje enviado! Te responderé lo antes posible"); 
-            this.resetForm()
-        }else if(response.data.msg === 'fail'){
-            alert("Algo falló al enviar tu mensaje")
-        }
-    })
-}
-resetForm(){
-  document.getElementById('contact-form').reset();
-}
+
 
   render() {
     return (

@@ -38,9 +38,6 @@ node_modules/
 # TypeScript v1 declaration files
 typings/
 
-# Optional npm cache directory
-.npm
-
 # Optional eslint cache
 .eslintcache
 
@@ -71,8 +68,8 @@ typings/
 # Serverless directories
 .serverless
 
-bin/
 
-db/index.js
 
-db/config.js
+db/publicindex.js
+
+db/publicconfig.js
