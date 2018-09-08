@@ -14,7 +14,7 @@ To-dos:
 - [ ] Add pagination in product results 
 - [ ] Add A to Z search in category list
 - [ ] Improve the search function. Right now, it doesn't show the most relevant results first.
-- [ ] Last page of results shows weird number of products. 
+- [x] Last page of results shows weird number of products. 
 
 
 
