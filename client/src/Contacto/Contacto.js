@@ -39,10 +39,14 @@ class Contacto extends Component {
               <h3>Formulario de contacto</h3>
               <ContactForm />
 
-            </div>
+            </div><br />
+            <div className='quantity'>Muchas gracias a <a href="https://github.com/seppo0010"> Sebastian Waisbrot</a>, <a href="https://github.com/LeandroLuque"> Leandro Luque </a> y
+        <a href="https://github.com/jtruzzi"> Julio Truzzi </a> por la invalorable ayuda para mejorar el sitio.</div><br />
           </div>
         </div>
         <br />
+
+        
 
         <Footer />
       </div>

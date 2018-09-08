@@ -3,9 +3,9 @@ const { HOSTINDEX, PASSINDEX } = process.env
 
 
 const pool = new Pool({
-    user: 'DBUSER',
+    user: 'male',
     host: HOSTINDEX,
-    database: 'DBNAME',
+    database: 'male',
     password: PASSINDEX,
     port: 5432,
   })
