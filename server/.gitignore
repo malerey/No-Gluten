@@ -67,9 +67,5 @@ typings/
 
 # Serverless directories
 .serverless
-
-
-
-db/publicindex.js
-
 db/publicconfig.js
+db/config.js
