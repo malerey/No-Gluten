@@ -31,7 +31,6 @@ class Resultados extends Component {
         console.log(result)
         this.setState({
           data: result,
-          renderedData: result,//result.slice(offset, offset + 8),
           total: result[0]['full_count'],
           received: true,
           query: query,
@@ -84,7 +83,7 @@ class Resultados extends Component {
     let prodslength = ''
     let page = this.state.page
 
-    { this.state.received ? (prodslength = this.state.renderedData.length) : ('') }
+    { this.state.received ? (prodslength = this.state.data.length) : ('') }
 
     return (
       
