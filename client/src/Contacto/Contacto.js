@@ -40,7 +40,7 @@ class Contacto extends Component {
               <ContactForm />
 
             </div><br />
-            <div className='quantity'>Muchas gracias a <a href="https://github.com/stormwatch"> Ezequiel Birman</a>, <a href="https://www.behance.net/LaisMacaria"> Lais Macaria</a>, <a href="https://github.com/seppo0010"> Sebastian Waisbrot</a>, <a href="https://github.com/LeandroLuque"> Leandro Luque </a> y
+            <div className='quantity'>Muchas gracias a <a href="https://github.com/stormwatch"> Ezequiel Birman</a>, <a href="https://about.me/lais.macaria"> Lais Macaria</a>, <a href="https://github.com/seppo0010"> Sebastian Waisbrot</a>, <a href="https://github.com/LeandroLuque"> Leandro Luque </a> y
         <a href="https://github.com/jtruzzi"> Julio Truzzi </a> por la invalorable ayuda para mejorar el sitio.</div><br />
           </div>
         </div>
