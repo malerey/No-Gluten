@@ -22,14 +22,17 @@ class Resultados extends Component {
   componentDidMount() {
     const offset = (this.state.page - 1) * 8;
     let query = this.props.match.params.query
-    fetch('https://server-ehygnedhic.now.sh/busqueda/' + query)
+    fetch('https://server-ehygnedhic.now.sh/busqueda/' + query + '?limit=8&offset=' + offset)
       .then(data => {
         return data.json();
       })
       .then(result => {
+        console.log(result.length)
+        console.log(result)
         this.setState({
           data: result,
-          renderedData: result.slice(offset, offset + 8),
+          renderedData: result,//result.slice(offset, offset + 8),
+          total: result[0]['full_count'],
           received: true,
           query: query,
           ajaxCompleted: true
@@ -40,14 +43,21 @@ class Resultados extends Component {
   changePage(page) {
     let prods = [...this.state.data]
     const offset = (page - 1) * 8;
-    this.setState({
-      page: page,
-      renderedData: prods.slice(offset, offset + 8),
-    });
+
+    fetch('http://localhost:3001/busqueda/' + this.state.query + '?limit=8&offset=' + offset)
+      .then(data => {
+        return data.json();
+      })
+      .then(result => {
+        this.setState({
+          data: result,
+          page: page
+        });
+      });
   }
 
   nextPage() {
-    if (this.state.page >= this.state.data.length / 8) {
+    if (this.state.page >= this.state.total / 8) {
       this.setState({
         page: this.state.page,
       });
@@ -70,11 +80,11 @@ class Resultados extends Component {
   render() {
     let { received } = this.state;
     let query = this.state.query
-    let length = ''
+    let length = this.state.total
     let prodslength = ''
-    let page = ''
+    let page = this.state.page
 
-    { this.state.received ? (length = this.state.data.length, prodslength = this.state.renderedData.length, page = this.state.page) : ('') }
+    { this.state.received ? (prodslength = this.state.renderedData.length) : ('') }
 
     return (
       
@@ -120,7 +130,7 @@ class Resultados extends Component {
           <div>
             {received ? (
               <div className="row">
-                {this.state.renderedData.map((result, index) => {
+                {this.state.data.map((result, index) => {
                   return <Product key={index} result={result} received={this.state.received} />;
                 })}
               </div>
