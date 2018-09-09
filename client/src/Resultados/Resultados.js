@@ -43,7 +43,7 @@ class Resultados extends Component {
     let prods = [...this.state.data]
     const offset = (page - 1) * 8;
 
-    fetch('http://localhost:3001/busqueda/' + this.state.query + '?limit=8&offset=' + offset)
+    fetch('https://server-ehygnedhic.now.sh/busqueda/' + this.state.query + '?limit=8&offset=' + offset)
       .then(data => {
         return data.json();
       })
