@@ -67,12 +67,5 @@ typings/
 
 # Serverless directories
 .serverless
-<<<<<<< HEAD
-=======
-
-
-
-db/index.js
-
+db/publicconfig.js
 db/config.js
->>>>>>> a7510903b87d1dc3d98895d8adc8b53cfb692242
