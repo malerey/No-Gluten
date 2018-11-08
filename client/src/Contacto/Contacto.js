@@ -17,7 +17,6 @@ class Contacto extends Component {
   render() {
     return (
       <div className='Main'>
-        <Header />
         <div className="container">
           <div>
             <br />
@@ -45,10 +44,6 @@ class Contacto extends Component {
           </div>
         </div>
         <br />
-
-        
-
-        <Footer />
       </div>
     );
   }

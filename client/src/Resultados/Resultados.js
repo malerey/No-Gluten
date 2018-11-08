@@ -45,8 +45,6 @@ class Resultados extends Component {
       
       <div className='Main'>
 
-        <Header />
-
         { !this.state.ajaxCompleted ? (
           <Loader
               type="ThreeDots"
@@ -66,7 +64,6 @@ class Resultados extends Component {
         
         )}
         
-        <Footer />
       </div>
    
     );

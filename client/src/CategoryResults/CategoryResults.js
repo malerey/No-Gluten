@@ -136,8 +136,6 @@ class CategoryResults extends Component {
     return (
       <div className='Main'>
 
-        <Header />
-
         { !this.state.ajaxCompleted ? (
           <Loader
               type="ThreeDots"
@@ -204,8 +202,7 @@ class CategoryResults extends Component {
         </ul>
         </div>
         )}
-
-        <Footer />
+        
       </div>
     );
   }

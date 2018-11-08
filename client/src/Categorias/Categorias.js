@@ -83,8 +83,6 @@ class CategoryResults extends Component {
     return (
       <div className='Main'>
 
-        <Header />
-
         <div className="container">
           <div>
             <br />
@@ -138,8 +136,6 @@ class CategoryResults extends Component {
             </div>
           </li>
         </ul>
-
-        <Footer />
       </div>
     );
   }
